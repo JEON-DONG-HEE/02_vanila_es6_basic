@@ -1,12 +1,24 @@
 const userEmail = [
     "userKorea@naver.com",
     "userUSA@gmail.com",
-    "userSpain@apple.com"
+    "userSpain@apple.com",
+    "userGermay@gmail.com"
 ];
 
-const findEmail = userEmail.find(item => item.includes("@apple.com"));
+// 원래는 이렇게 쓸 수 있는 코드를
+// const cleaned = [];
+// userEmail.forEach(email => {
+//     cleaned.push(email.split("@")[0]);
+// });
+// console.log(cleaned);
 
-console.log(findEmail);
+
+// 결과는 같지만 map, arrow function, implict return 을 활용해
+// 다음과 같이 한줄로 쓸 수 있다
+const cleaned = userEmail.map(email => email.split("@")[0]);
+console.log(cleaned);
+
+
 
 
 
